@@ -1,6 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import LoginUsuarioView from'../views/LoginUsuarioView.vue'
+import RecuperarclaveView from '../views/RecuperarclaveView.vue'
+import RecuperarCodigoView from '../views/RecuperarCodigoView.vue'
+import RegistroView from '../views/RegistroView.vue'
+import NuevaContraseñaView from '../views/NuevaContraseñaView.vue'
+import InicioAdministradorView from '../views/InicioAdministradorView.vue'
+import PerfilUsuarioView from '../views/PerfilUsuarioView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +16,42 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+ 
+  {
+    path: '/LoginUsuarioView',
+    name: 'LoginUsuarioView',
+    component: LoginUsuarioView
+  },
+  {
+    path: '/RecuperarclaveView',
+    name: 'RecuperarclaveView',
+    component: RecuperarclaveView
+  },
+  {
+    path: '/RecuperarCodigoView',
+    name: 'RecuperarCodigoView',
+    component: RecuperarCodigoView
+  },
+  {
+    path: '/RegistroView',
+    name: 'RegistroView',
+    component: RegistroView
+  },
+  {
+    path: '/NuevaContraseñaView',
+    name: 'NuevaContraseñaView',
+    component: NuevaContraseñaView
+  },
+  {
+    path: '/InicioAdministradorView',
+    name: 'InicioAdministradorView',
+    component: InicioAdministradorView
+  },
+  {
+    path: '/PerfilUsuarioView',
+    name: 'PerfilUsuarioView',
+    component: PerfilUsuarioView
   },
   {
     path: '/about',

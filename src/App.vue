@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-    <nav>
+    <!--<nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+      <router-link to="/about">About</router-link>|
+      <router-link to="/loginusuarioView">Inicio usuario</router-link>|
+      <router-link to="/RecuperarclaveView">Recuperar clave</router-link>|
+      <router-link to="/RecuperarCodigoView">Recuperar Codigo</router-link>|
+      <router-link to="/RegistroView">Registro Usuario</router-link>|
+      <router-link to="/NuevaContraseñaView">Nueva Contraseña</router-link>|
+      <router-link to="/InicioAdministradorView">Inicio</router-link>|
+      <router-link to="/PerfilUsuarioView">Perfil Usuario</router-link>|
+
+
+    </nav>-->
     <router-view/>
   </div>
 </template>
