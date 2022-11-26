@@ -10,7 +10,7 @@
             contenedor-inicio
           ">
           <!-- parde de la targeta de iniciar sesion -->
-          <section class="inicio col-8 col-sm-6 col-lg-4 col-xxl-6">
+          <section class="inicio col-8 col-sm-6 col-lg-4 col-xxl-3">
             <b-card-group deck>
               <b-card header-bg-variant="success" text-variant="black" header="Iniciar Sesion" class="text-cente">
               <b-card-text>
@@ -53,13 +53,13 @@
                       </a>
   
                       <div id="passwordHelpBlock" class="text-center form-text">
-                        ¿No tienes cuenta? 
+                        ¿ Aún no tienes cuenta? 
                       </div>
   
                       <b-button pill variant type="submit" class="boton d-grid gap-2 mx-auto" to="/RegistroView"
                       v-b-tooltip.hover
        >
-                        Registrarme</b-button>
+                        Registrate</b-button>
                         
 
 

@@ -8,6 +8,8 @@ import RegistroView from '../views/RegistroView.vue'
 import NuevaContraseñaView from '../views/NuevaContraseñaView.vue'
 import InicioAdministradorView from '../views/InicioAdministradorView.vue'
 import PerfilUsuarioView from '../views/PerfilUsuarioView.vue'
+import CategoriasadminView from '../views/CategoriasadminView'
+
 
 Vue.use(VueRouter)
 
@@ -17,12 +19,19 @@ const routes = [
     name: 'home',
     component: HomeView
   },
- 
+  {
+    path: '/CategoriasadminView',
+    name: 'CategoriasadminView',
+    component: CategoriasadminView
+  },
+  
   {
     path: '/LoginUsuarioView',
     name: 'LoginUsuarioView',
     component: LoginUsuarioView
   },
+  
+  
   {
     path: '/RecuperarclaveView',
     name: 'RecuperarclaveView',
