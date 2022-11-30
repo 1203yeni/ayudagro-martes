@@ -24,21 +24,29 @@
                                             <div class="col-sm-15">
                                                 <input type="text" class="form-control" name="Apellido" id="Apellido" v-model="form.Apellido">
                                             </div>
-                                            <label for="" class="control-label col-sm-5">Correo Electronico</label>
+                                            <label for="" class="control-label col-sm-5">Nick-name</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Correo electronico" id="correo electronico" v-model="form.correoElectronico">
+                                                <input type="text" class="form-control" name="Nick-name" id="Nick-name" v-model="form.correoElectronico">
                                             </div>
-                                            <label for="" class="control-label col-sm-7">Crear Contraseña</label>
+                                            <label for="" class="control-label col-sm-7">Password</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Crear contraseña" id="Crear contraseña" v-model="form.crearContraseña">
+                                                <input type="text" class="form-control" name="Password" id="Password" v-model="form.crearContraseña">
                                             </div>
-                                            <label for="" class="control-label col-sm-10">Confirmar Contraseña</label>
+                                            <label for="" class="control-label col-sm-10">Email</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Confirmar contraseña" id="Confirmar contraseña" v-model="form.confirmarContraseña">
+                                                <input type="text" class="form-control" name="Email" id="Email" v-model="form.confirmarContraseña">
                                             </div>
-                                            <label for="" class="control-label col-sm-5">Telefono</label>
+                                            <label for="" class="control-label col-sm-5">Direccion</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Telefono" id="Telefono" v-model="form.Telefono">
+                                                <input type="text" class="form-control" name="Direccion" id="Direccion" v-model="form.Telefono">
+                                            </div>
+                                            <label for="" class="control-label col-sm-5">Puntos_Estudios</label>
+                                            <div class="col-sm-15">
+                                                <input type="text" class="form-control" name="Puntos_Estudios" id="Puntos_Estudios" v-model="form.Telefono">
+                                            </div>
+                                            <label for="" class="control-label col-sm-5">Puntos_Participacion</label>
+                                            <div class="col-sm-15">
+                                                <input type="text" class="form-control" name="Puntos_Participacion" id="Puntos_Participacion" v-model="form.Telefono">
                                             </div>
                                         </div>
                                     </div>
@@ -65,10 +73,12 @@ export default {
             form:{
              "nombre":"",
              "Apellido":"",
-             "correoElectronico":"",
-             "crearContraseña":"",
-             "confirmarContraseña":"",
-             "Telefono":""
+             "Nick-name":"",
+             "Password":"",
+             "Email":"",
+             "Direccion":"",
+             "Puntos_Estudios":"",
+             "Puntos_Participacion":""
             }
         }
     },

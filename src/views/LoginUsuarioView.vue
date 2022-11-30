@@ -35,7 +35,8 @@
                           aria-describedby="btnGroupAddon"  
                           />
                           
-                          
+                          <img src="@/assets/mostrar.png" alt="oculto" @click="showPassword = !showPassword"
+                            class="oculto" />
                             
                         <div class="contraseña">
                           
@@ -111,5 +112,11 @@ border-radius: 3px  ;
 .contenedor{
   margin: 5%;
 }
-
+.oculto{
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 </style>

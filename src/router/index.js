@@ -6,8 +6,10 @@ import RecuperarclaveView from '../views/RecuperarclaveView.vue'
 import RecuperarCodigoView from '../views/RecuperarCodigoView.vue'
 import RegistroView from '../views/RegistroView.vue'
 import NuevaContraseñaView from '../views/NuevaContraseñaView.vue'
-import InicioAdministradorView from '../views/InicioAdministradorView.vue'
+import LoginAdministradorView from '../views/LoginAdministradorView.vue'
 import PerfilUsuarioView from '../views/PerfilUsuarioView.vue'
+import AlertaView from '../views/AlertaView.vue'
+import InicioAdministradorView from '../views/InicioAdministradorView.vue'
 
 Vue.use(VueRouter)
 
@@ -44,14 +46,24 @@ const routes = [
     component: NuevaContraseñaView
   },
   {
-    path: '/InicioAdministradorView',
-    name: 'InicioAdministradorView',
-    component: InicioAdministradorView
+    path: '/LoginAdministradorView',
+    name: 'LoginAdministradorView',
+    component: LoginAdministradorView
   },
   {
     path: '/PerfilUsuarioView',
     name: 'PerfilUsuarioView',
     component: PerfilUsuarioView
+  },
+  {
+    path: '/AlertaView',
+    name: 'AlertaView',
+    component: AlertaView
+  },
+  {
+    path: '/InicioAdministradorView',
+    name: 'InicioAdministradorView',
+    component: InicioAdministradorView
   },
   {
     path: '/about',
