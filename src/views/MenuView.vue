@@ -1,6 +1,10 @@
 <template >
 
     <div class="container" >
+        <nav class="encabezado">
+            <img class="nav1" src="@/assets/Group 1.png" alt="">
+            <img class="nav2" src="@/assets/Ellipse 16.png" alt="">
+        </nav>
         
             <b-row class="my1">
                 <b-col class="primera" sm="3">
@@ -165,6 +169,13 @@ export default {
 
 <style lang="scss">
 @import "@/assets/sass/botones/botonesGenerales.scss";
+.encabezado{
+    background-color: #028436;
+}
+.nav1{
+    height: 70%;
+    margin-left: 90%;
+    }
 .preguntas {
     text-align: center;
 }
