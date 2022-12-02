@@ -176,6 +176,9 @@ export default {
     height: 70%;
     margin-left: 90%;
     }
+    .nav2{
+        margin-right: 90%;
+    }
 .preguntas {
     text-align: center;
 }
