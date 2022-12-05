@@ -11,6 +11,7 @@
       <router-link to="/LoginAdministradorView">Inicio</router-link>|
       <router-link to="/PerfilUsuarioView">Perfil Usuario</router-link>|
       <router-link to="/InicioAdministradorView">Inicio Administrador</router-link>|
+      <router-link to="/CultivosAdministradorView">Cultivos Administrador</router-link>|
 
 
     </nav>

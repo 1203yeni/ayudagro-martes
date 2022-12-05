@@ -40,14 +40,8 @@
                                             <div class="col-sm-15">
                                                 <input type="text" class="form-control" name="Direccion" id="Direccion" v-model="form.Telefono">
                                             </div>
-                                            <label for="" class="control-label col-sm-7">Puntos_Estudios</label>
-                                            <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Puntos_Estudios" id="Puntos_Estudios" v-model="form.Telefono">
-                                            </div>
-                                            <label for="" class="control-label col-sm-7">Puntos_Participacion</label>
-                                            <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Puntos_Participacion" id="Puntos_Participacion" v-model="form.Telefono">
-                                            </div>
+                                            <br>
+                                            
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -76,9 +70,8 @@ export default {
              "Nick-name":"",
              "Password":"",
              "Email":"",
-             "Direccion":"",
-             "Puntos_Estudios":"",
-             "Puntos_Participacion":""
+             "Direccion":""
+             
             }
         }
     },

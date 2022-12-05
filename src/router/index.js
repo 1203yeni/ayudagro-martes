@@ -10,6 +10,7 @@ import LoginAdministradorView from '../views/LoginAdministradorView.vue'
 import PerfilUsuarioView from '../views/PerfilUsuarioView.vue'
 import AlertaView from '../views/AlertaView.vue'
 import InicioAdministradorView from '../views/InicioAdministradorView.vue'
+import CultivosAdministradorView from '../views/CultivosAdministrador.vue'
 
 Vue.use(VueRouter)
 
@@ -65,6 +66,12 @@ const routes = [
     name: 'InicioAdministradorView',
     component: InicioAdministradorView
   },
+  {
+    path: '/CultivosAdministradorView',
+    name: 'CultivosAdministradorView',
+    component: CultivosAdministradorView
+  },
+  
   {
     path: '/about',
     name: 'about',
