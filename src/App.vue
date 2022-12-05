@@ -5,7 +5,19 @@
       <router-link to="/about">About</router-link>|
       <router-link to="/MenuView">Menu</router-link>|
       
-    </nav> 
+   
+      <router-link to="/loginusuarioView">Inicio usuario</router-link>|
+      <router-link to="/RecuperarclaveView">Recuperar clave</router-link>|
+      <router-link to="/RecuperarCodigoView">Recuperar Codigo</router-link>|
+      <router-link to="/RegistroView">Registro Usuario</router-link>|
+      <router-link to="/NuevaContraseñaView">Nueva Contraseña</router-link>|
+      <router-link to="/LoginAdministradorView">Inicio</router-link>|
+      <router-link to="/PerfilUsuarioView">Perfil Usuario</router-link>|
+      <router-link to="/InicioAdministradorView">Inicio Administrador</router-link>|}
+      <router-link to="/AdministradorView">Administrador</router-link>|
+
+
+    </nav>
     <router-view/>
   </div>
 </template>

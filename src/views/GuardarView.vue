@@ -47,74 +47,8 @@
                 </b-col>
 
                 <b-col class="segunda" sm="8">
-                    <div class="combo2">
-                        <br>
-                        <div >
-                            <div  class="ayudagro" >
-                                <div>
-                                <button class="Agregar1" @click="Agregar()">Agregar Cultivos</button>
-                                </div>
-                                <P>Armando Casas Trochez</P>
-                                <div>
-                                <button class="Publicar3" @click="guardar()">Publicar</button>
-                                </div>
-                           </div>
-                       
-                        </div>
-                        <br>
-                        <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
-                        </div>
-                        <br>
-                        <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                            <div class="comentario">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Se recomienda 5 cc de oxigeno por litro de agua</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        </div>
-                        <br> 
-                    </div>
+                    <img class="chulito" src="@/assets/OIP.jpeg" alt="">
+                    <h6>Guardado Exitosamente </h6>
                 </b-col>
 
             </b-row>
@@ -259,6 +193,9 @@ export default {
     border: 1px solid;
     height: 7em;
     border-radius: 40px;
+}
+.chulito{
+    padding-top: 20%;
 }
 
 </style>

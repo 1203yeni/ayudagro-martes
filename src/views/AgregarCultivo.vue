@@ -55,10 +55,11 @@
                                 <button class="Subir" @click="Agregar()">Agregar Cultivos</button>
                                 </div>
                                 <P>Armando Casas Trochez</P>
+                                <img class="logito" src="@/assets/Component 2.png" alt="">
                                 <b-form-file v-model="file2" class="mt-3" plain></b-form-file>
 
                                 <div>
-                                <button class="Publicar" @click="guardar()">Publicar</button>
+                                <button class="Publicar" @click="Publicar()">Publicar</button>
                                 </div>
                            </div>
                        
@@ -80,6 +81,10 @@ export default {
     },
     components: {},
     methods: {
+        Publicar(){
+            this.$router.push("/GuardarView");
+            
+         },
          Preguntas(){
             this.$router.push("/PreguntasSinR");
             
@@ -208,6 +213,10 @@ export default {
 .Subir{
 margin-top: 5%;
 background-color:#6BC921;
+}
+.logito{
+    height: 30%;
+    width: 30%;
 }
 
 </style>

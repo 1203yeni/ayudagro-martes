@@ -3,7 +3,9 @@
     <div class="container" >
         <nav class="encabezado">
             <img class="nav1" src="@/assets/Group 1.png" alt="">
-            <img class="nav2" src="@/assets/Ellipse 16.png" alt="">
+            <b-button class="salir btn btn-success">Salir
+                <b-icon icon="reply-fill"></b-icon>
+            </b-button>
         </nav>
         
             <b-row class="my1">
@@ -171,6 +173,8 @@ export default {
 @import "@/assets/sass/botones/botonesGenerales.scss";
 .encabezado{
     background-color: #028436;
+    height: 10px;
+    margin-top: 10%;
 }
 .nav1{
     height: 70%;
@@ -276,5 +280,8 @@ export default {
     border: 1px solid;
     height: 7em;
     border-radius: 40px;
+}
+.salir{
+    margin-top: -2%;
 }
 </style>
