@@ -22,15 +22,15 @@
                                             </div>
                                             <label for="" class="control-label col-sm-7">Apellido</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Apellido" id="Apellido" v-model="form.Apellido">
+                                                <input type="text" class="form-control" name="Apellido" id="Apellido" v-model="form.apellido">
                                             </div>
                                             <label for="" class="control-label col-sm-7">Nick_name</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Nick-name" id="Nick-name" v-model="form.Nick_name">
+                                                <input type="text" class="form-control" name="Nick-name" id="Nick-name" v-model="form.nickName">
                                             </div>
                                             <label for="" class="control-label col-sm-7">Password</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Password" id="Password" v-model="form.Password">
+                                                <input type="text" class="form-control" name="Password" id="Password" v-model="form.PassWorld">
                                             </div>
                                             <label for="" class="control-label col-sm-7">Email</label>
                                             <div class="col-sm-15">
@@ -38,7 +38,7 @@
                                             </div>
                                             <label for="" class="control-label col-sm-7">Direccion</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Direccion" id="Direccion" v-model="form.Direccion">
+                                                <input type="text" class="form-control" name="Direccion" id="Direccion" v-model="form.direccion">
                                             </div>
                                             <br>
                                             
@@ -66,12 +66,13 @@ export default {
     data(){
         return{
             form:{
-             "nombre":"",
-             "Apellido":"",
-             "Nick_name":"",
-             "Password":"",
+            "idRol":1,  
+             "nombre":'',
+             "apellido":"",
+             "nickName":"",
+             "PassWorld":"",
              "Email":"",
-             "Direccion":""
+             "direccion":""
              
             }
         }
@@ -79,7 +80,8 @@ export default {
     components:{
     },
     methods:{
-        GuardarUsuario() {
+      
+        GuardarUsuario() {  alert("si funciona")
             axios.post("http://localhost:3000/nuevoAgricultor",this.form).then(response=>{
                 console.log(response)
             })
