@@ -79,11 +79,11 @@ export default {
     components:{
     },
     methods:{
-        GuardarUsuario() {
+       /* GuardarUsuario() {
             axios.post("http://localhost:3000/nuevoAgricultor",this.form).then(response=>{
                 console.log(response)
             })
-        }
+        }*/
     }
 }
 </script>
