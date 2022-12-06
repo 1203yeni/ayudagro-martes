@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 import MenuView from '../views/MenuView.vue'
 import PreguntasSinR from '../views/PreguntasSinR.vue'
 import PreguntarView from '../views/PreguntarView.vue'
@@ -21,13 +21,9 @@ import AdministradorView from '../views/AdministradorView.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  
   {
     path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/LoginUsuarioView',
     name: 'LoginUsuarioView',
     component: LoginUsuarioView
   },
