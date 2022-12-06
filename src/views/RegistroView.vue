@@ -24,34 +24,28 @@
                                             <div class="col-sm-15">
                                                 <input type="text" class="form-control" name="Apellido" id="Apellido" v-model="form.Apellido">
                                             </div>
-                                            <label for="" class="control-label col-sm-7">Nick-name</label>
+                                            <label for="" class="control-label col-sm-7">Nick_name</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Nick-name" id="Nick-name" v-model="form.correoElectronico">
+                                                <input type="text" class="form-control" name="Nick-name" id="Nick-name" v-model="form.Nick_name">
                                             </div>
                                             <label for="" class="control-label col-sm-7">Password</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Password" id="Password" v-model="form.crearContraseña">
+                                                <input type="text" class="form-control" name="Password" id="Password" v-model="form.Password">
                                             </div>
                                             <label for="" class="control-label col-sm-7">Email</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Email" id="Email" v-model="form.confirmarContraseña">
+                                                <input type="text" class="form-control" name="Email" id="Email" v-model="form.Email">
                                             </div>
                                             <label for="" class="control-label col-sm-7">Direccion</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Direccion" id="Direccion" v-model="form.Telefono">
+                                                <input type="text" class="form-control" name="Direccion" id="Direccion" v-model="form.Direccion">
                                             </div>
-                                            <label for="" class="control-label col-sm-7">Puntos_Estudios</label>
-                                            <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Puntos_Estudios" id="Puntos_Estudios" v-model="form.Telefono">
-                                            </div>
-                                            <label for="" class="control-label col-sm-7">Puntos_Participacion</label>
-                                            <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Puntos_Participacion" id="Puntos_Participacion" v-model="form.Telefono">
-                                            </div>
+                                            <br>
+                                            
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <b-button class="boton" to="/InicioPantallaView" >Crear Usuario</b-button>
+                                        <b-button class="boton" @click="GuardarUsuario()">Crear Usuario</b-button>
                                     </div>
                                 </form>
                             </b-card-text>
@@ -67,24 +61,29 @@
 
 <script>
 export default {
+    // import axios from'axios',
     name:"RegistroView",
     data(){
         return{
             form:{
              "nombre":"",
              "Apellido":"",
-             "Nick-name":"",
+             "Nick_name":"",
              "Password":"",
              "Email":"",
-             "Direccion":"",
-             "Puntos_Estudios":"",
-             "Puntos_Participacion":""
+             "Direccion":""
+             
             }
         }
     },
     components:{
     },
     methods:{
+        GuardarUsuario() {
+            axios.post("http://localhost:3000/nuevoAgricultor",this.form).then(response=>{
+                console.log(response)
+            })
+        }
     }
 }
 </script>
