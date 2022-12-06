@@ -160,7 +160,7 @@
     </div>
 </template>
 <script scoped>
-
+import axios from 'axios'
 export default {
     data() {
         return {
@@ -169,6 +169,13 @@ export default {
     },
     components: {},
     methods: {
+
+        Preguntar() {  alert("si funciona")
+            axios.post("http://localhost:3000/nuevoAgricultor",this.form).then(response=>{
+                console.log(response)
+            })
+        },
+
          Preguntas(){
             this.$router.push("/PreguntasSinR");
             
