@@ -171,7 +171,7 @@ export default {
     methods: {
 
         Preguntar() {  alert("si funciona")
-            axios.post("http://localhost:3000/nuevoAgricultor",this.form).then(response=>{
+            axios.post("http://localhost:3000/Nuevapreguntar",this.form).then(response=>{
                 console.log(response)
             })
         },
