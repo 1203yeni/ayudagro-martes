@@ -153,10 +153,6 @@ export default {
     padding: 1px;
 }
 
-.problemas {
-    
-   
-}
 
 .nav1 {
     background-color: rgb(209, 228, 209);
