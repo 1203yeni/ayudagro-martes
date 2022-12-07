@@ -99,7 +99,7 @@
                             
                         </div>
                         <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
+                        <b-button class="responder" to="/RespuestasView" @click="guardar()" variant="outline-primary">Responder</b-button>
                         </div>
                         <br>
                         <div class="tarjeta1">

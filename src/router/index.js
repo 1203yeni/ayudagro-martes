@@ -17,6 +17,7 @@ import AlertaView from '../views/AlertaView.vue'
 import InicioAdministradorView from '../views/InicioAdministradorView.vue'
 import GuardarView from '../views/GuardarView.vue'
 import AdministradorView from '../views/AdministradorView.vue'
+import RespuestasView from '../views/RespuestasView.vue'
 
 Vue.use(VueRouter)
 
@@ -102,6 +103,11 @@ const routes = [
     path: '/PreguntasSinR',
     name: 'PreguntasSinR',
     component:PreguntasSinR
+  },
+  {
+    path: '/RespuestasView',
+    name: 'RespuestasView',
+    component:RespuestasView
   },
   {
     path: '/about',
