@@ -59,15 +59,33 @@
                                 del
                                 campo</p>
                             <br>
-                            <p class="ayudagro1"> ¿Que sucede o en que te podemos ayudarte?</p>
+                            <label for="" class="control-label col-sm-7" >¿Que sucede o en que podemos ayudarte?</label>
+                            <div>
+                            <b-form-textarea
+                             id="textarea"
+                             v-model="form.text"
+                            placeholder="Digita tu pregunta.."
+                            
+                              rows="3"
+                            max-rows="6"
+                            ></b-form-textarea>
+                            <b-button class="enviarR btn btn-success">Guardar Pregunta
+                            <b-icon icon=""> </b-icon>
+                           </b-button>
+
+                           <pre class="mt-3 mb-0">{{ text }}</pre>
+                           
+
+                          </div>
                         </div>
+                        <br>
                         <div class="tarjeta1">
                             <b-row>
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
                                 </b-col>
 
-                                <b-col sm="9">
+                                <b-col sm="9" v-model="form.Pregunta">
                                     <h6 class="problemas">Armando Casas Trochez</h6>
                                     <br>
                                     <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
@@ -139,11 +157,16 @@
 
     </div>
 </template>
-<script scoped>
-
+<script >
+import axios from'axios'
 export default {
     data() {
         return {
+            form:{
+                "Pregunta":"",
+                "text":""
+            }
+            
 
         }
     },
@@ -160,7 +183,14 @@ export default {
          Cultivos(){
             this.$router.push("/CultivosView");
             
+         },
+         Pregunta(){
+            axios.post("",this.form).then(response =>{
+                console.log(response)
+            })
          }
+       
+         
          
     },
 
@@ -283,5 +313,9 @@ export default {
 }
 .salir{
     margin-top: -2%;
+}
+.form-control{
+    width: 12%;
+    height: 7em;
 }
 </style>

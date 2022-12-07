@@ -46,7 +46,7 @@
 
                   <!--boton ingrisar-->
 
-                  <b-button pill variant type="submit" class="boton d-grid gap-2 mx-auto" to="/InicioPantallaView">Ingresar
+                  <b-button pill variant type="submit" class="boton d-grid gap-2 mx-auto" to="/MenuView">Ingresar
                       </b-button>
                   <br />
                       <a class="text-center form-text" href="/RecuperarclaveView">
