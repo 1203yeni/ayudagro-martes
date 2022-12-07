@@ -73,6 +73,10 @@
                             <b-icon icon=""> </b-icon>
                            </b-button>
 
+                                 
+
+                           
+
                            <pre class="mt-3 mb-0">{{ text }}</pre>
                            
 
@@ -314,8 +318,5 @@ export default {
 .salir{
     margin-top: -2%;
 }
-.form-control{
-    width: 12%;
-    height: 7em;
-}
+
 </style>
