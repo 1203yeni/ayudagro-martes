@@ -82,10 +82,11 @@ export default {
     },
     methods:{
       
-        GuardarUsuario() {  alert("si funciona")
+        GuardarUsuario() {  alert("registro exitoso")
             axios.post("http://localhost:3000/nuevoAgricultor",this.form).then(response=>{
                 console.log(response)
             })
+            this.$router.push("/");
         }
     },
     mounted(){
