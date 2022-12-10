@@ -166,7 +166,24 @@ export default {
     methods: {
          PreguntasSR(){
             this.$router.push("/PreguntasSinR");
-         }
+         },
+         Salir(){
+            this.$router.push("/");
+            
+         },
+
+        Preguntas(){
+            this.$router.push("/PreguntasSinR");
+            
+         },
+         Preguntar(){
+            this.$router.push("/PreguntarView");
+            
+         },
+         Cultivos(){
+            this.$router.push("/CultivosView");
+            
+         },
     },
 
     computed: {},
