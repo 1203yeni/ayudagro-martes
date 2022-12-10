@@ -118,16 +118,16 @@
                             
                         </div>
                         <div>
-                            <div class="comentario" v-for="pregunta in pregunta" :key="pregunta.id">
+                            <div class="comentario" v-for="agricultor in agricultor" :key="agricultor.id">
                             <b-row>
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
                                 </b-col>
 
                                 <b-col sm="9">
-                                    <h6 class="problemas">{pregunta.nombre}</h6>
+                                    <h6 class="problemas">{{agricultor.nombre}}</h6>
                                     <br>
-                                    <h6 class="problemas"> Se recomienda 5 cc de oxigeno por litro de agua</h6>
+                                    <h6 class="problemas">{{agricultor.apellido}}</h6>
                                 </b-col>
                                
                             </b-row>
@@ -174,6 +174,7 @@ export default {
                 "idAgricultor":1,
             },     
             pregunta:null,
+            agricultor:null,
 
         }
     },
@@ -213,13 +214,12 @@ export default {
     mounted(){
         axios.get("http://localhost:3000/pregunta").then(response=>{
       this.pregunta=response.data
-    })
-    },
-    lounted(){
-        axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
-      this.pregunta=response.data
-    })
-   },
+    });
+    axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
+      this.agricultor=response.data
+    });
+    
+   }
 }
 
 </script>
