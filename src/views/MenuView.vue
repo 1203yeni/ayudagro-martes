@@ -118,14 +118,14 @@
                             
                         </div>
                         <div>
-                            <div class="comentario">
+                            <div class="comentario" v-for="pregunta in pregunta" :key="pregunta.id">
                             <b-row>
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
                                 </b-col>
 
                                 <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
+                                    <h6 class="problemas">{pregunta.nombre}</h6>
                                     <br>
                                     <h6 class="problemas"> Se recomienda 5 cc de oxigeno por litro de agua</h6>
                                 </b-col>
@@ -135,7 +135,7 @@
                         </div>
                         </div>
                         <br>
-                        <div class="tarjeta1">
+                        <div class="tarjeta1" v-for="pregunta in pregunta" :key="pregunta.id">
                             <b-row>
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
@@ -144,7 +144,8 @@
                                 <b-col sm="9">
                                     <h6 class="problemas">Armando Casas Trochez</h6>
                                     <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
+                                    <h6>{{pregunta.contenido}}</h6>
+                                    <!-- <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6> -->
                                 </b-col>
                                
                             </b-row>
@@ -162,7 +163,7 @@
     </div>
 </template>
 <script >
-import axios from'axios'
+import axios from "axios"
 export default {
     data() {
         return {
@@ -172,7 +173,7 @@ export default {
                 "idCategoria":1,
                 "idAgricultor":1,
             },     
-            
+            pregunta:null,
 
         }
     },
@@ -208,8 +209,19 @@ export default {
     },
 
     computed: {},
-    mounted: {}
+
+    mounted(){
+        axios.get("http://localhost:3000/pregunta").then(response=>{
+      this.pregunta=response.data
+    })
+    },
+    lounted(){
+        axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
+      this.pregunta=response.data
+    })
+   },
 }
+
 </script>
 
 <style lang="scss">

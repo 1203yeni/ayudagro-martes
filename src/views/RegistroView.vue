@@ -93,7 +93,7 @@ export default {
     alert()
     axios.get("http://localhost:3000/pregunta").then(response=>{
       this.listar=response.data
-    })
+    })  
   },
 }
 </script>
