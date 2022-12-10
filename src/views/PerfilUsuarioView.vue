@@ -1,5 +1,6 @@
 <template>
   <div>
+    
       <nav class="encabezado">
           <img  src="../assets/logo1.png" alt="Logo" width="50" height="26"  >
           <b-icon icon="reply-fill"></b-icon>
