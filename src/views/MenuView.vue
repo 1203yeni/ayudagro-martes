@@ -63,13 +63,13 @@
                             <div>
                             <b-form-textarea
                              id="textarea"
-                             v-model="form.text"
+                             v-model="form.contenido"
                             placeholder="Digita tu pregunta.."
                             
                               rows="3"
                             max-rows="6"
                             ></b-form-textarea>
-                            <b-button class="enviarR btn btn-success">Guardar Pregunta
+                            <b-button class="boton" @click="GuardarPregunta()">Guardar Pregunta
                             <b-icon icon=""> </b-icon>
                            </b-button>
 
@@ -167,16 +167,25 @@ export default {
     data() {
         return {
             form:{
-                "Pregunta":"",
-                "text":""
-            }
+                "nombre":"Preguntas del Agro",
+                "contenido":"",
+                "idCategoria":1,
+                "idAgricultor":1,
+            },     
             
 
         }
     },
+
     components: {},
     methods: {
-         Preguntas(){
+        GuardarPregunta() {  alert("pregunta guardada exitosamente")
+            axios.post("http://localhost:3000/Nuevapregunta",this.form).then(response=>{
+                console.log(response)
+            })
+        },
+
+        Preguntas(){
             this.$router.push("/PreguntasSinR");
             
          },
