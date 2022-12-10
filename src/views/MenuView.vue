@@ -3,7 +3,7 @@
     <div class="container" >
         <nav class="encabezado">
             <img class="nav1" src="@/assets/Group 1.png" alt="">
-            <b-button class="salir btn btn-success">Salir
+            <b-button @click="Salir()" class="salir btn btn-success">Salir
                 <b-icon icon="reply-fill"></b-icon>
             </b-button>
         </nav>
@@ -185,7 +185,11 @@ export default {
             axios.post("http://localhost:3000/Nuevapregunta",this.form).then(response=>{
                 console.log(response)
             })
-        },
+         },
+         Salir(){
+            this.$router.push("/");
+            
+         },
 
         Preguntas(){
             this.$router.push("/PreguntasSinR");
