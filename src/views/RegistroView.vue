@@ -74,7 +74,8 @@ export default {
              "Email":"",
              "direccion":""
              
-            }
+            },
+            listar:null,
         }
     },
     components:{
@@ -86,7 +87,13 @@ export default {
                 console.log(response)
             })
         }
-    }
+    },
+    mounted(){
+    alert()
+    axios.get("http://localhost:3000/pregunta").then(response=>{
+      this.listar=response.data
+    })
+  },
 }
 </script>
 
