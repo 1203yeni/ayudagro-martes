@@ -17,7 +17,7 @@
       <router-link to="/AdministradorView">Administrador</router-link>|
       <router-link to="/RespuestasView">Respuestas</router-link>|
 
-
+      
     </nav>-->
     <router-view/>
   </div>

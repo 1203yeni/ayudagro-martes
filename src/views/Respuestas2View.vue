@@ -1,12 +1,6 @@
 <template >
 
     <div class="container" >
-        <nav class="encabezado">
-            <img class="nav1" src="@/assets/Group 1.png" alt="">
-            <b-button @click="Salir()" class="salir btn btn-success">Salir
-                <b-icon icon="reply-fill"></b-icon>
-            </b-button>
-        </nav>
         
             <b-row class="my1">
                 <b-col class="primera" sm="3">
@@ -24,7 +18,7 @@
                     <div class="combo">
                         <img class="logo" src="@/assets/Component 2.png">
                         <div>
-                            <b-button @click="Preguntar()">Preguntar</b-button>
+                            <b-button @click="Agricultor()">Preguntar</b-button>
                             <br>
                             <br>
 
@@ -32,16 +26,16 @@
                                 <button class="button1" @click="guardar()" >Perfil</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="Preguntas()">Preguntas sin responder</button>
+                                <button class="button1" @click="PreguntasSR()">Preguntas sin responder</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="Cultivos()" >Cultivos</button>
+                                <button class="button1" @click="guardar()" >Cultivos</button>
                                 <br>
                                 <br>
                                 <button class="button1" @click="guardar()"> Respuestas</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="Estadisticas()">Estadiscas</button>
+                                <button class="button1" @click="guardar()">Estadiscas</button>
                                 <br>
                                 <br>
                             </div>
@@ -52,148 +46,130 @@
                 <b-col sm="1">
                 </b-col>
 
-                <b-col class="segunda"  fluid ="sm" sm="8">
+                <b-col class="segunda" sm="8">
                     <div class="combo2">
-                        <div>
-                            <p>Bienvenidos a AyudAgro, esperamos que sea la solucion que tanto buscas a los problemas
-                                del
-                                campo</p>
+                        <div class="tarjeta1">
+                            <b-row>
+                                <b-col sm="3">
+                                    <img class="img5" src="@/assets/icon.jpg">
+                                </b-col>
+
+                                <b-col sm="9">
+                                    <h6 class="problemas">Armando Casas Trochez</h6>
+                                    <br>
+                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
+                                </b-col>
+                               
+                            </b-row>
                             <br>
-                            <label for="" class="control-label col-sm-7" >¿Que sucede o en que podemos ayudarte?</label>
                             <div>
                             <b-form-textarea
                              id="textarea"
                              v-model="form.contenido"
-                            placeholder="Digita tu pregunta.."
+                            placeholder="Digita tu respuesta.."
                             
                               rows="3"
                             max-rows="6"
                             ></b-form-textarea>
-                            <b-button class="boton" @click="GuardarPregunta()">Guardar Pregunta
-                            <b-icon icon=""> </b-icon>
+                            <b-button class="enviarR btn btn-success">Responder
+                            <b-icon icon="symmetry-horizontal"> </b-icon>
                            </b-button>
-
-                                 
-
-                           
-
                            <pre class="mt-3 mb-0">{{ text }}</pre>
-                           
+                           <div class="tarjeta1">
+                            <b-row>
+                                <b-col sm="3">
+                                    <img class="img5" src="@/assets/icon.jpg">
+                                </b-col>
 
+                                <b-col sm="9">
+                                    <h6 class="problemas">Armando Casas Trochez</h6>
+                                    <br>
+                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
+                                </b-col>
+                               
+                            </b-row>
+                            <br>
+                            <div>
+                            <b-form-textarea
+                             id="textarea"
+                             v-model="form.contenido"
+                            placeholder="Digita tu respuesta.."
+                            
+                              rows="3"
+                            max-rows="6"
+                            ></b-form-textarea>
+                            <b-button class="enviarR btn btn-success">Responder
+                            <b-icon icon="symmetry-horizontal"> </b-icon>
+                           </b-button>
+                           <pre class="mt-3 mb-0">{{ text }}</pre>
+                          </div>
+                          <div class="tarjeta1">
+                            <b-row>
+                                <b-col sm="3">
+                                    <img class="img5" src="@/assets/icon.jpg">
+                                </b-col>
+
+                                <b-col sm="9">
+                                    <h6 class="problemas">Armando Casas Trochez</h6>
+                                    <br>
+                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
+                                </b-col>
+                               
+                            </b-row>
+                            <br>
+                            <div>
+                            <b-form-textarea
+                             id="textarea"
+                             v-model="form.contenido"
+                            placeholder="Digita tu respuesta.."
+                            
+                              rows="3"
+                            max-rows="6"
+                            ></b-form-textarea>
+                            <b-button class="enviarR btn btn-success">Responder
+                            <b-icon icon="symmetry-horizontal"> </b-icon>
+                           </b-button>
+                           <pre class="mt-3 mb-0">{{ text }}</pre>
                           </div>
                         </div>
-                        <br>
-                        <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9" v-model="form.Pregunta">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                        <b-button class="responder" to="/RespuestasView" @click="guardar()" variant="outline-primary">Responder</b-button>
-                        </div>
-                        <br>
-                        <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                            <div class="comentario" v-for="agricultor in agricultor" :key="agricultor.id">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">{{agricultor.nombre}}</h6>
-                                    <br>
-                                    <h6 class="problemas">{{agricultor.apellido}}</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        </div>
-                        <br>
-                        <div class="tarjeta1" v-for="pregunta in pregunta" :key="pregunta.id">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6>{{pregunta.contenido}}</h6>
-                                    <!-- <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6> -->
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
                         </div>
                         
+                          </div>
+                        </div> 
                     </div>
+                  
                 </b-col>
 
             </b-row>
 
     </div>
 </template>
-<script >
-import axios from "axios"
+
+<style >
+
+</style>
+<script>
+
 export default {
     data() {
         return {
             form:{
-                "nombre":"Preguntas del Agro",
-                "contenido":"",
-                "idCategoria":1,
-                "idAgricultor":1,
-            },     
-            pregunta:null,
-            agricultor:null,
-
+               
+               "text":""
+           }
+        
         }
     },
-
     components: {},
     methods: {
-        GuardarPregunta() {  alert("pregunta guardada exitosamente")
-            axios.post("http://localhost:3000/Nuevapregunta",this.form).then(response=>{
-                console.log(response)
-            })
+         PreguntasSR(){
+            this.$router.push("/PreguntasSinR");
          },
          Salir(){
             this.$router.push("/");
             
          },
-         Estadisticas(){
-            this.$router.push("/Respuestas2View");
-            
-         },
+
         Preguntas(){
             this.$router.push("/PreguntasSinR");
             
@@ -206,45 +182,15 @@ export default {
             this.$router.push("/CultivosView");
             
          },
-         Pregunta(){
-            axios.post("",this.form).then(response =>{
-                console.log(response)
-            })
-         }
-       
-         
-         
     },
 
     computed: {},
-
-    mounted(){
-        axios.get("http://localhost:3000/pregunta").then(response=>{
-      this.pregunta=response.data
-    });
-    axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
-      this.agricultor=response.data
-    });
-    
-   }
+    mounted: {}
 }
-
 </script>
 
 <style lang="scss">
-@import "@/assets/sass/botones/botonesGenerales.scss";
-.encabezado{
-    background-color: #028436;
-    height: 10px;
-    margin-top: 10%;
-}
-.nav1{
-    height: 70%;
-    margin-left: 90%;
-    }
-    .nav2{
-        margin-right: 90%;
-    }
+
 .preguntas {
     text-align: center;
 }
@@ -314,7 +260,7 @@ export default {
 
 .perfil {
     border: 1px solid;
-    background-color: rgb(67, 133, 67);
+    background-color: #008A37;
     padding: 1%;
     border-radius: 1%;
 }
@@ -333,18 +279,11 @@ export default {
 }
 .segunda{
     border: 1px solid;
-   
+    height:55em;
 }
 .primera{
     border: 1px solid;
-}
-.comentario{
-    border: 1px solid;
-    height: 7em;
-    border-radius: 40px;
-}
-.salir{
-    margin-top: -2%;
+    height:40em;
 }
 
 </style>
