@@ -60,14 +60,13 @@
                             <label for="" class="control-label col-sm-7" >¿Que sucede o en que podemos ayudarte?</label>
                             <div >
                             <b-form-textarea  v-model="form.contenido" placeholder="Digita tu pregunta.." rows="3" max-rows="6">
-                        </b-form-textarea>
-                            <b-button class="boton" @click="GuardarPregunta()">Guardar Pregunta
+                           </b-form-textarea>
+                            <b-button class="boton" @click="GuardarPregunta()" >Guardar Pregunta
                             <b-icon icon=""> </b-icon>
                            </b-button>
                           </div>
                         </div>
-                        <br>
-                        <br>
+                         <br>
                         <div class="tarjeta1" v-for="pregunta in pregunta" :key="pregunta.id">
                             <b-row>
                                 <b-col sm="3">
@@ -82,14 +81,14 @@
                                  </b-col>
                                
                               </b-row>
-                              <b-button class="responder" to="/RespuestasView" @click="guardar()" variant="outline-primary">Responder</b-button>
+                              <b-button class="responder" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
                                     <br>
                                     <br>        
                              </div>
                      </div>
                 </b-col>
             </b-row>
-        </div>
+        </div> 
 </template>
 <script >
 import axios from "axios"
@@ -111,7 +110,8 @@ export default {
     methods: {
         GuardarPregunta() {  alert("pregunta guardada exitosamente")
             axios.post("http://localhost:3000/CreatePregunta",this.form).then(response=>{
-                console.log(response)
+                console.log(response);
+            
             })
          },
          Salir(){

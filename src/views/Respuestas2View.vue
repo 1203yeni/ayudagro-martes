@@ -46,96 +46,42 @@
                 <b-col sm="1">
                 </b-col>
 
-                <b-col class="segunda" sm="8">
+                <b-col class="segunda" sm="8" v-for="agricultor in agricultor" :key="agricultor.id">
                     <div class="combo2">
-                        <div class="tarjeta1">
+                        <div class="tarjeta1" v-for="pregunta in pregunta" :key="pregunta.id">
                             <b-row>
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
                                 </b-col>
 
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
+                                <b-col sm="9" >
+                                    <h6 class="problemas">{{agricultor.nombre+" "+agricultor.apellido}}</h6>
                                     <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
+                                    <h6 class="problemas"> {{pregunta.contenido}}</h6>
+                                    <br>
                                 </b-col>
                                
                             </b-row>
                             <br>
-                            <div>
-                            <b-form-textarea
-                             id="textarea"
-                             v-model="form.contenido"
-                            placeholder="Digita tu respuesta.."
+                            <b.row>
+                                <b-col >
                             
-                              rows="3"
-                            max-rows="6"
-                            ></b-form-textarea>
-                            <b-button class="enviarR btn btn-success">Responder
-                            <b-icon icon="symmetry-horizontal"> </b-icon>
-                           </b-button>
-                           <pre class="mt-3 mb-0">{{ text }}</pre>
-                           <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            <br>
-                            <div>
-                            <b-form-textarea
-                             id="textarea"
-                             v-model="form.contenido"
-                            placeholder="Digita tu respuesta.."
+                            <b-form-textarea id="textarea" v-model="form.contenido" placeholder="Digita tu respuesta.." rows="3" max-rows="6">
+                            </b-form-textarea>
                             
-                              rows="3"
-                            max-rows="6"
-                            ></b-form-textarea>
-                            <b-button class="enviarR btn btn-success">Responder
-                            <b-icon icon="symmetry-horizontal"> </b-icon>
-                           </b-button>
-                           <pre class="mt-3 mb-0">{{ text }}</pre>
-                          </div>
-                          <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            <br>
-                            <div>
-                            <b-form-textarea
-                             id="textarea"
-                             v-model="form.contenido"
-                            placeholder="Digita tu respuesta.."
+                          </b-col>
+                        </b.row>
                             
-                              rows="3"
-                            max-rows="6"
-                            ></b-form-textarea>
-                            <b-button class="enviarR btn btn-success">Responder
-                            <b-icon icon="symmetry-horizontal"> </b-icon>
-                           </b-button>
-                           <pre class="mt-3 mb-0">{{ text }}</pre>
-                          </div>
-                        </div>
-                        </div>
-                        
-                          </div>
+                          
                         </div> 
+                        <div>
+                            <b-form-textarea id="textarea"
+                             v-model="form.contenido" placeholder="Digita tu respuesta.." rows="3" max-rows="6"
+                            ></b-form-textarea>
+                            <b-button class="" @click="guardarRespuesta()">Responder
+                            <b-icon icon="symmetry-horizontal"> </b-icon>
+                           </b-button>
+                          </div>
                     </div>
                   
                 </b-col>
@@ -149,19 +95,32 @@
 
 </style>
 <script>
-
+import axios from 'axios';
+//import { response } from 'express';
 export default {
     data() {
         return {
             form:{
+               "contenido":"",
+               estado: "👍",
                
-               "text":""
-           }
+           },
+           pregunta:null,
+           agricultor:null,
+           respuesta:null,
         
         }
     },
     components: {},
     methods: {
+        guardarRespuesta(){
+            alert("respueta guardada")
+            axios.post("http://localhost:3000/NuevaRespuesta",this.form).then(response=>{
+                console.log(response);
+ 
+            })
+        },
+
          PreguntasSR(){
             this.$router.push("/PreguntasSinR");
          },
@@ -185,7 +144,17 @@ export default {
     },
 
     computed: {},
-    mounted: {}
+    mounted(){
+        axios.get("http://localhost:3000/pregunta").then(response=>{
+            this.pregunta=response.data
+        });
+        axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
+            this.agricultor=response.data
+        });
+        axios.get("").then(response=>{
+            this.respuesta=response.data
+        });
+    }
 }
 </script>
 
@@ -229,8 +198,15 @@ export default {
 }
 
 .tarjeta1 {
+    //background:url("@/assets/imagenfondocomentarios.jpg");
+    background-color:rgb(133, 67, 78);
+    border: 1px solid;
+    height: 7em;
+
+}
+.tarjeta2 {
     background:url("@/assets/imagenfondocomentarios.jpg");
-    background-color:rgb(67, 133, 67);
+    background-color:rgb(67, 92, 133);
     border: 1px solid;
     height: 7em;
 
