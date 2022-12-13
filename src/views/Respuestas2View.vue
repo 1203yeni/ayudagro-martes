@@ -18,24 +18,24 @@
                     <div class="combo">
                         <img class="logo" src="@/assets/Component 2.png">
                         <div>
-                            <b-button @click="Agricultor()">Preguntar</b-button>
+                            <b-button @click="Preguntar()">Preguntar</b-button>
                             <br>
                             <br>
 
                             <div class="preguntas">
-                                <button class="button1" @click="guardar()" >Perfil</button>
+                                <button class="button1" @click="Perfil()" >Perfil</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="PreguntasSR()">Preguntas sin responder</button>
+                                <button class="button1" @click="Preguntas()">Preguntas sin responder</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="guardar()" >Cultivos</button>
+                                <button class="button1" @click="Cultivos()" >Cultivos</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="guardar()"> Respuestas</button>
+                                <button class="button1" @click="Respuestas()"> Respuestas</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="guardar()">Estadiscas</button>
+                                <button class="button1" @click="Estadisticas()">Estadiscas</button>
                                 <br>
                                 <br>
                             </div>
@@ -162,14 +162,11 @@ export default {
     },
     components: {},
     methods: {
-         PreguntasSR(){
-            this.$router.push("/PreguntasSinR");
-         },
+         
          Salir(){
-            this.$router.push("/");
-            
+            this.$router.push("/"); 
          },
-
+        
         Preguntas(){
             this.$router.push("/PreguntasSinR");
             
@@ -182,10 +179,28 @@ export default {
             this.$router.push("/CultivosView");
             
          },
+         Perfil(){
+            this.$router.push("/PerfilUsuarioView");
+            
+         },
     },
 
     computed: {},
-    mounted: {}
+    mounted: {
+    
+        Preguntas(){
+            this.$router.push("/PreguntasSinR");
+            
+         },
+         Preguntar(){
+            this.$router.push("/PreguntarView");
+            
+         },
+         Cultivos(){
+            this.$router.push("/CultivosView");
+            
+         },
+    }
 }
 </script>
 

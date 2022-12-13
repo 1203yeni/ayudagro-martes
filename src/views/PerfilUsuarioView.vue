@@ -99,6 +99,7 @@ data(){
 }
 </script>
 
+
 <style scoped> 
 .encabezado{
   background-color: green;
