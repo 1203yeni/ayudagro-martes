@@ -23,7 +23,7 @@
                             <br>
 
                             <div class="preguntas">
-                                <button class="button1" @click="guardar()" >Perfil</button>
+                                <button class="button1" @click="Perfil()" >Perfil</button>
                                 <br>
                                 <br>
                                 <button class="button1" @click="Preguntas()">Preguntas sin responder</button>
@@ -35,7 +35,7 @@
                                 <button class="button1" @click="guardar()"> Respuestas</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="guardar()">Estadiscas</button>
+                                <button class="button1" @click="Estadisticas()">Estadiscas</button>
                                 <br>
                                 <br>
                             </div>
@@ -131,18 +131,28 @@ export default {
     },
     components: {},
     methods: {
-         Preguntas(){
+          Estadisticas(){
+            this.$router.push("/Respuestas2View");  
+         },
+         Cultivos(){
+            this.$router.push("/cultivosView");
+            
+         },
+        Preguntas(){
             this.$router.push("/PreguntasSinR");
             
          },
          Preguntar(){
             this.$router.push("/PreguntarView");
-            
-         },
-         Agregar(){
+        },  
+        Perfil(){
+            this.$router.push("/PerfilUsuarioView");
+        },  
+        Agregar(){
             this.$router.push("/AgregarCultivo");
+        }, 
+        
             
-         }
     },
 
     computed: {},
@@ -218,17 +228,6 @@ export default {
 .row {
     padding: 1px;
 }
-
-.problemas {
-    
-   
-}
-
-.nav1 {
-    background-color: rgb(209, 228, 209);
-    
-}
-
 .perfil {
     border: 1px solid;
     background-color: rgb(67, 133, 67);

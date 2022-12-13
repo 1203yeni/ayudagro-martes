@@ -29,7 +29,7 @@
                             <br>
 
                             <div class="preguntas">
-                                <button class="button1" @click="guardar()" >Perfil</button>
+                                <button class="button1" @click="Perfil()" >Perfil</button>
                                 <br>
                                 <br>
                                 <button class="button1" @click="Preguntas()">Preguntas sin responder</button>
@@ -116,6 +116,10 @@ export default {
          },
          Salir(){
             this.$router.push("/");
+            
+         },
+         Perfil(){
+            this.$router.push("/PerfilUsuarioView");
             
          },
          Estadisticas(){
@@ -234,12 +238,6 @@ export default {
     
     text-align:left;
 }
-
-.nav1 {
-    background-color: rgb(209, 228, 209);
-    
-}
-
 .perfil {
     border: 1px solid;
     background-color: rgb(67, 133, 67);
@@ -274,6 +272,9 @@ export default {
 }
 .salir{
     margin-top: -2%;
+}
+*{
+    padding: 0%;
 }
 
 </style>
