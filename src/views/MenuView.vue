@@ -53,114 +53,43 @@
                 </b-col>
 
                 <b-col class="segunda"  fluid ="sm" sm="8">
-                    <div class="combo2">
+                    <div class="combo2" >
                         <div>
-                            <p>Bienvenidos a AyudAgro, esperamos que sea la solucion que tanto buscas a los problemas
-                                del
-                                campo</p>
+                            <p>Bienvenidos a AyudAgro, esperamos que sea la solucion que tanto buscas a los probl del campo</p>
                             <br>
                             <label for="" class="control-label col-sm-7" >¿Que sucede o en que podemos ayudarte?</label>
-                            <div>
-                            <b-form-textarea
-                             id="textarea"
-                             v-model="form.contenido"
-                            placeholder="Digita tu pregunta.."
-                            
-                              rows="3"
-                            max-rows="6"
-                            ></b-form-textarea>
+                            <div >
+                            <b-form-textarea  v-model="form.contenido" placeholder="Digita tu pregunta.." rows="3" max-rows="6">
+                        </b-form-textarea>
                             <b-button class="boton" @click="GuardarPregunta()">Guardar Pregunta
                             <b-icon icon=""> </b-icon>
                            </b-button>
-
-                                 
-
-                           
-
-                           <pre class="mt-3 mb-0">{{ text }}</pre>
-                           
-
                           </div>
                         </div>
                         <br>
-                        <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9" v-model="form.Pregunta">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                        <b-button class="responder" to="/RespuestasView" @click="guardar()" variant="outline-primary">Responder</b-button>
-                        </div>
-                        <br>
-                        <div class="tarjeta1">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
-                                    <br>
-                                    <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                            <div class="comentario" v-for="agricultor in agricultor" :key="agricultor.id">
-                            <b-row>
-                                <b-col sm="3">
-                                    <img class="img5" src="@/assets/icon.jpg">
-                                </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">{{agricultor.nombre}}</h6>
-                                    <br>
-                                    <h6 class="problemas">{{agricultor.apellido}}</h6>
-                                </b-col>
-                               
-                            </b-row>
-                            
-                        </div>
-                        </div>
                         <br>
                         <div class="tarjeta1" v-for="pregunta in pregunta" :key="pregunta.id">
                             <b-row>
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
                                 </b-col>
-
-                                <b-col sm="9">
-                                    <h6 class="problemas">Armando Casas Trochez</h6>
+                                <b-col sm="9" v-for="agricultor in agricultor" :key="agricultor.id">
+                                    <h6 class="problemas">{{agricultor.nombre}}</h6>
                                     <br>
                                     <h6>{{pregunta.contenido}}</h6>
                                     <!-- <h6 class="problemas"> Problema con la broca en el cultivo de cafe</h6> -->
-                                </b-col>
+                                
+                                 </b-col>
                                
-                            </b-row>
-                            
-                        </div>
-                        <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
-                        </div>
-                        
-                    </div>
+                              </b-row>
+                              <b-button class="responder" to="/RespuestasView" @click="guardar()" variant="outline-primary">Responder</b-button>
+                                    <br>
+                                    <br>        
+                             </div>
+                     </div>
                 </b-col>
-
             </b-row>
-
-    </div>
+        </div>
 </template>
 <script >
 import axios from "axios"
@@ -168,7 +97,6 @@ export default {
     data() {
         return {
             form:{
-                "nombre":"Preguntas del Agro",
                 "contenido":"",
                 "idCategoria":1,
                 "idAgricultor":1,
@@ -182,7 +110,7 @@ export default {
     components: {},
     methods: {
         GuardarPregunta() {  alert("pregunta guardada exitosamente")
-            axios.post("http://localhost:3000/Nuevapregunta",this.form).then(response=>{
+            axios.post("http://localhost:3000/CreatePregunta",this.form).then(response=>{
                 console.log(response)
             })
          },
@@ -324,7 +252,8 @@ export default {
 }
 .responder{
 
-    width: 99%;;
+    width:20%;
+    height:30%
 }
 .butons2{
     width: 100%;
