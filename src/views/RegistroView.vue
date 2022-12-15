@@ -74,19 +74,27 @@ export default {
              "Email":"",
              "direccion":""
              
-            }
+            },
+            listar:null,
         }
     },
     components:{
     },
     methods:{
       
-        GuardarUsuario() {  alert("si funciona")
+        GuardarUsuario() {  alert("registro exitoso")
             axios.post("http://localhost:3000/nuevoAgricultor",this.form).then(response=>{
                 console.log(response)
             })
+            this.$router.push("/");
         }
-    }
+    },
+    mounted(){
+    alert()
+    axios.get("http://localhost:3000/pregunta").then(response=>{
+      this.listar=response.data
+    })  
+  },
 }
 </script>
 

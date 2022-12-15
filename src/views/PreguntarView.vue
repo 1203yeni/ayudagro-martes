@@ -23,19 +23,19 @@
                             <br>
 
                             <div class="preguntas">
-                                <button class="button1" @click="guardar()" >Perfil</button>
+                                <button class="button1" @click="Perfil()" >Perfil</button>
                                 <br>
                                 <br>
                                 <button class="button1" @click="Preguntas()">Preguntas sin responder</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="guardar()" >Cultivos</button>
+                                <button class="button1" @click="Cultivos()" >Cultivos</button>
                                 <br>
                                 <br>
                                 <button class="button1" @click="guardar()"> Respuestas</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="guardar()">Estadiscas</button>
+                                <button class="button1" @click="Estadisticas()">Estadiscas</button>
                                 <br>
                                 <br>
                             </div>
@@ -176,10 +176,23 @@ export default {
             })
         },
 
-         Preguntas(){
+    
+         Estadisticas(){
+            this.$router.push("/Respuestas2View");
+            
+         },
+        Preguntas(){
             this.$router.push("/PreguntasSinR");
             
-         }
+         },
+         Cultivos(){
+            this.$router.push("/CultivosView");
+            
+         },
+         Perfil(){
+            this.$router.push("/PerfilUsuarioView");
+            
+         },
     },
 
     computed: {},

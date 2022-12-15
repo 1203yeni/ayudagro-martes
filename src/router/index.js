@@ -18,6 +18,7 @@ import InicioAdministradorView from '../views/InicioAdministradorView.vue'
 import GuardarView from '../views/GuardarView.vue'
 import AdministradorView from '../views/AdministradorView.vue'
 import RespuestasView from '../views/RespuestasView.vue'
+import Respuestas2View from '../views/Respuestas2View.vue'
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,11 @@ const routes = [
     path: '/AdministradorView',
     name: 'AdministradorView',
     component: AdministradorView
+  },
+  {
+    path: '/Respuestas2View',
+    name: 'Respuestas2View',
+    component: Respuestas2View
   },
   {
     path: '/GuardarView',
