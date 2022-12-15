@@ -16,11 +16,11 @@
 
                 </div>
                 <br>
-                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Categorias</b-button>
+                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" >Categorias</b-button>
                 <br>
-                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Usuarios</b-button>
+                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="/InicioAdministradorView">Usuarios</b-button>
                 <br>
-                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Cultivos</b-button>
+                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="/CultivosAdministradorView">Cultivos</b-button>
                 <br>
                 <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Ver Preguntas</b-button>
                 <br>
