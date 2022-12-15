@@ -30,7 +30,7 @@
                                             </div>
                                             <label for="" class="control-label col-sm-7">Password</label>
                                             <div class="col-sm-15">
-                                                <input type="text" class="form-control" name="Password" id="Password" v-model="form.PassWorld">
+                                                <input type="password" class="form-control" name="Password" id="Password" v-model="form.PassWorld">
                                             </div>
                                             <label for="" class="control-label col-sm-7">Email</label>
                                             <div class="col-sm-15">
@@ -90,7 +90,6 @@ export default {
         }
     },
     mounted(){
-    alert()
     axios.get("http://localhost:3000/pregunta").then(response=>{
       this.listar=response.data
     })  
