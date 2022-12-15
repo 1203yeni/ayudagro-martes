@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <b-button class="boton" @click="GuardarUsuario()">Crear Usuario</b-button>
+                                        <b-button class="boton" @click="GuardarUsuario()"  >Crear Usuario</b-button>
                                     </div>
                                 </form>
                             </b-card-text>
