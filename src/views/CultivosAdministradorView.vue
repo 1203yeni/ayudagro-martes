@@ -16,11 +16,11 @@
 
                 </div>
                 <br>
-                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" >Categorias</b-button>
+                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Categorias</b-button>
                 <br>
                 <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="/InicioAdministradorView">Usuarios</b-button>
                 <br>
-                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="/CultivosAdministradorView">Cultivos</b-button>
+                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="CultivosAdministradorView">Cultivos</b-button>
                 <br>
                 <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Ver Preguntas</b-button>
                 <br>
@@ -58,28 +58,23 @@
         </b-row>
     </div>
 </template>
-
-
- <script>
+<script>
 export default {
-    name:'InicioAdministradorView',
+    name:'CultivosAdministradorView',
     data() {
         return {
            
             fields :[{key:'id', label:'Id'},
               {key:'Nombre', label:'Nombre'},
-              {key:'Apellido', label:'Apellido'},
+              {key:'Descripcion', label:'Descripcion'},
               "ACCIONES"],
             items:[
-                {isActive:true, id: 1,Nombre:'Ivan',Apellido:'Cuaspud', },
-                {isActive:true, id: 2,Nombre:'Daira',Apellido:'Martinez', },
-                {isActive:true, id: 3,Nombre:'Yenifer',Apellido:'Martinez', },
-                {isActive:true, id: 4,Nombre:'yonni',Apellido:'Erazo', },
-                {isActive:true, id: 5,Nombre:'Danier',Apellido:'Troches', },
-                {isActive:true, id: 6,Nombre:'Angie',Apellido:'Cuaspud', },
-                {isActive:true, id: 7,Nombre:'Maria',Apellido:'Muñoz', },
-                {isActive:true, id: 8,Nombre:'Ivan',Apellido:'Cuaspud', },
-                {isActive:true, id: 9,Nombre:'Daira',Apellido:'Meneses', },
+                {isActive:true, id: 1,Nombre:'Fresas',Descripcion:'Cultivo de fresa, 6 meses sembrada abonada con idroconplex ', },
+                {isActive:true, id: 2,Nombre:'Fresas',Descripcion:'Cultivo de fresa, 6 meses sembrada abonada con idroconplex ', },
+                {isActive:true, id: 3,Nombre:'Papa',Descripcion:'El cultivo de mi papi', },
+                {isActive:true, id: 4,Nombre:'Mora',Descripcion:'Cultivo de mora de 3meses sembrada abonada ', },
+                
+              
 
             ],
             filter:null,
@@ -97,7 +92,7 @@ export default {
     },
     methods:{
         eliminar(){
-              alert("Seguro que quieres eliminar")
+              alert("eliminar")
            
           },
           editar(){
