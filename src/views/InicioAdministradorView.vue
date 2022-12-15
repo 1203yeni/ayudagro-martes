@@ -97,7 +97,7 @@ export default {
     },
     methods:{
         eliminar(){
-              alert("eliminar")
+              alert("Seguro que quieres eliminar")
            
           },
           editar(){

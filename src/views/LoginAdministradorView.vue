@@ -54,7 +54,7 @@
                             </b-input-group>
                             </div>
 
-                            <b-button pill variant type="submit" class="boton d-grid gap-2 mx-auto">Ingresar</b-button>
+                            <b-button pill variant type="submit" class="boton d-grid gap-2 mx-auto" to="/InicioAdministradorView">Ingresar</b-button>
                         </form>
                       </b-card-text>
                     </b-card>
@@ -70,7 +70,7 @@
     </template>
     <script>
     export default{
-        name:"InicioAdministradorView",
+        name:"LoginAdministradorView",
         components:{
 
         },

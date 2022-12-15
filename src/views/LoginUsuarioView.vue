@@ -61,6 +61,11 @@
                       v-b-tooltip.hover
        >
                         Registrarme</b-button>
+
+                       
+                      <a class="text-center form-text" href="/LoginAdministradorView">
+                        Ingresar Como Administrador
+                      </a>
                         
 
 
