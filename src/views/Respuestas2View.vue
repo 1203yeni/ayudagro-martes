@@ -46,30 +46,28 @@
                 <b-col sm="1">
                 </b-col>
 
-                <b-col class="segunda" sm="8"  v-for="pregunta in pregunta" :key="pregunta.id">
+                <b-col class="segunda" sm="8">
                     <div class="combo2"   >
-                        <div class="tarjeta1" v-for="agricultor in agricultor" :key="agricultor.id">
+                        <div class="tarjeta1">
                             <b-row >
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
                                 </b-col>
 
                                 <b-col sm="9">
-                                    <h6 class="problemas">{{agricultor.nombre+" "+agricultor.apellido}}</h6>
-                                  
-                                    <h6 class="problemas" > {{pregunta.contenido}}</h6>
+                                    <h6 class="problemas" ></h6>
+                                    <h6 class="problemas" ></h6>
+                                    
                                     <br>
                                 </b-col>
                                
                             </b-row> 
                         </div> 
                         <div>
-                            <b-form-textarea id="textarea" v-model="form.contenido"   placeholder="Digita tu respuesta.." rows="3" max-rows="6">
-                                <div v-for="respuesta in respuesta" :key="respuesta.id">
-                            <h6>{{respuesta.contenido}}</h6>
-                               </div>
-                        </b-form-textarea>
-                            <b-button class="" @click="guardarRespuesta()">Responder
+                            <b-form-textarea  v-model="form.contenido" placeholder="Digita tu pregunta.." rows="3" max-rows="6">
+                                <p></p>
+                           </b-form-textarea>
+                            <b-button class="boton" @click="guardarRespuesta()" >Guardar respuesta
                             <b-icon icon="symmetry-horizontal"> </b-icon>
                            </b-button>
                           </div>
@@ -92,9 +90,7 @@ export default {
         return {
             form:{
                "contenido":"",
-               
-               
-           },
+               },
            pregunta:null,
            agricultor:null,
            respuesta:null,
@@ -191,8 +187,8 @@ export default {
 }
 
 .tarjeta1 {
-    //background:url("@/assets/imagenfondocomentarios.jpg");
-    background-color:rgb(133, 67, 78);
+    background:url("@/assets/imagenfondocomentarios.jpg");
+    background-color:rgb(67, 133, 93);
     border: 1px solid;
     height: 7em;
 

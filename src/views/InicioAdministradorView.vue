@@ -34,7 +34,7 @@
 
             <b-col class="segunda" sm="8">
              <b-table  :filter="filter" id="my-table" :items="items" :fields="fields" class="my-table" :per-page="perPage"
-             :current-page="currentPage">
+            :current-page="currentPage">
               
              <template #cell(ACCIONES)="row">
                 <b-button size="sm" @click="eliminar()" variant="danger" class="mb-2 ">
@@ -61,6 +61,7 @@
 
 
  <script>
+ import axios from'axios'
 export default {
     name:'InicioAdministradorView',
     data() {
@@ -71,15 +72,15 @@ export default {
               {key:'Apellido', label:'Apellido'},
               "ACCIONES"],
             items:[
-                {isActive:true, id: 1,Nombre:'Ivan',Apellido:'Cuaspud', },
-                {isActive:true, id: 2,Nombre:'Daira',Apellido:'Martinez', },
-                {isActive:true, id: 3,Nombre:'Yenifer',Apellido:'Martinez', },
-                {isActive:true, id: 4,Nombre:'yonni',Apellido:'Erazo', },
-                {isActive:true, id: 5,Nombre:'Danier',Apellido:'Troches', },
-                {isActive:true, id: 6,Nombre:'Angie',Apellido:'Cuaspud', },
-                {isActive:true, id: 7,Nombre:'Maria',Apellido:'Muñoz', },
-                {isActive:true, id: 8,Nombre:'Ivan',Apellido:'Cuaspud', },
-                {isActive:true, id: 9,Nombre:'Daira',Apellido:'Meneses', },
+                {isActive:true, id:'1',Nombre:'Ivan',Apellido:'Cuaspud', },
+                // {isActive:true, id: 2,Nombre:'Daira',Apellido:'Martinez', },
+                // {isActive:true, id: 3,Nombre:'Yenifer',Apellido:'Martinez', },
+                // {isActive:true, id: 4,Nombre:'yonni',Apellido:'Erazo', },
+                // {isActive:true, id: 5,Nombre:'Danier',Apellido:'Troches', },
+                // {isActive:true, id: 6,Nombre:'Angie',Apellido:'Cuaspud', },
+                // {isActive:true, id: 7,Nombre:'Maria',Apellido:'Muñoz', },
+                // {isActive:true, id: 8,Nombre:'Ivan',Apellido:'Cuaspud', },
+                // {isActive:true, id: 9,Nombre:'Daira',Apellido:'Meneses', },
 
             ],
             filter:null,
@@ -87,7 +88,10 @@ export default {
           rows:100,
           perPage:10,
           listap:null,
+          agricultor:null,
+          id:'agricultor.id',
         }
+     
     },
     components:{
         
@@ -104,9 +108,13 @@ export default {
              
           }
     },
-    mounted: function(){
+    mounted(){
+        axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
+            this.agricultor=response.data
+        });
 
     }
+    
 }
 </script>
 
