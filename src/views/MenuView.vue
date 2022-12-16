@@ -81,7 +81,7 @@
                                  </b-col>
                                
                               </b-row>
-                              <b-button class="responder" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
+                              <b-button class="responder2" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
                                     <br>
                                     <br>        
                              </div>
@@ -151,7 +151,7 @@ export default {
     computed: {},
 
     mounted(){
-        axios.get("http://localhost:3000/pregunta").then(response=>{
+        axios.get("http://localhost:3000/preguntadetalle").then(response=>{
       this.pregunta=response.data
     });
     axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
@@ -250,9 +250,9 @@ export default {
     height: 40em;
     
 }
-.responder{
-
-    width:20%;
+.responder2{
+    margin-top: -6%;
+    
     height:30%
 }
 .butons2{

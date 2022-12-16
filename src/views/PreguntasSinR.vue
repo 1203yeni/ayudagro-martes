@@ -64,7 +64,7 @@
                             
                         </div>
                         <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
+                        <b-button class="responder" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
                         </div>
                         <br>
                         <div class="tarjeta1">
@@ -83,7 +83,7 @@
                             
                         </div>
                         <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
+                        <b-button class="responder" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
                         </div>
                         <br>
                         <div class="tarjeta1">
@@ -102,7 +102,7 @@
                             
                         </div>
                         <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
+                        <b-button class="responder" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
                         </div>
                         <br>
                         <div class="tarjeta1">
@@ -121,7 +121,7 @@
                             
                         </div>
                         <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
+                        <b-button class="responder" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
                         </div>
                         <br>
                         <div class="tarjeta1">
@@ -140,7 +140,7 @@
                             
                         </div>
                         <div>
-                        <b-button class="responder" @click="guardar()" variant="outline-primary">Responder</b-button>
+                        <b-button class="responder" to="/Respuestas2View" @click="guardar()" variant="outline-primary">Responder</b-button>
                         </div>
                         
                     </div>
@@ -236,6 +236,7 @@ export default {
     background-color:rgb(67, 133, 67);
     border: 1px solid;
     height: 7em;
+    margin-top: 8px;
 
 }
 

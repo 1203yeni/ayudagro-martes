@@ -16,11 +16,11 @@
 
                 </div>
                 <br>
-                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" >Categorias</b-button>
+                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Categorias</b-button>
                 <br>
                 <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="/InicioAdministradorView">Usuarios</b-button>
                 <br>
-                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="/CultivosAdministradorView">Cultivos</b-button>
+                <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto" to="CultivosAdministradorView">Cultivos</b-button>
                 <br>
                 <b-button class="Categorias btn btn-light d-grid gap-2 mx-auto">Ver Preguntas</b-button>
                 <br>
@@ -34,7 +34,7 @@
 
             <b-col class="segunda" sm="8">
              <b-table  :filter="filter" id="my-table" :items="items" :fields="fields" class="my-table" :per-page="perPage"
-            :current-page="currentPage">
+             :current-page="currentPage">
               
              <template #cell(ACCIONES)="row">
                 <b-button size="sm" @click="eliminar()" variant="danger" class="mb-2 ">
@@ -58,29 +58,23 @@
         </b-row>
     </div>
 </template>
-
-
- <script>
- import axios from'axios'
+<script>
 export default {
-    name:'InicioAdministradorView',
+    name:'CultivosAdministradorView',
     data() {
         return {
            
             fields :[{key:'id', label:'Id'},
               {key:'Nombre', label:'Nombre'},
-              {key:'Apellido', label:'Apellido'},
+              {key:'Descripcion', label:'Descripcion'},
               "ACCIONES"],
             items:[
-                {isActive:true, id:'1',Nombre:'Ivan',Apellido:'Cuaspud', },
-                // {isActive:true, id: 2,Nombre:'Daira',Apellido:'Martinez', },
-                // {isActive:true, id: 3,Nombre:'Yenifer',Apellido:'Martinez', },
-                // {isActive:true, id: 4,Nombre:'yonni',Apellido:'Erazo', },
-                // {isActive:true, id: 5,Nombre:'Danier',Apellido:'Troches', },
-                // {isActive:true, id: 6,Nombre:'Angie',Apellido:'Cuaspud', },
-                // {isActive:true, id: 7,Nombre:'Maria',Apellido:'Muñoz', },
-                // {isActive:true, id: 8,Nombre:'Ivan',Apellido:'Cuaspud', },
-                // {isActive:true, id: 9,Nombre:'Daira',Apellido:'Meneses', },
+                {isActive:true, id: 1,Nombre:'Fresas',Descripcion:'Cultivo de fresa, 6 meses sembrada abonada con idroconplex ', },
+                {isActive:true, id: 2,Nombre:'Fresas',Descripcion:'Cultivo de fresa, 6 meses sembrada abonada con idroconplex ', },
+                {isActive:true, id: 3,Nombre:'Papa',Descripcion:'El cultivo de mi papi', },
+                {isActive:true, id: 4,Nombre:'Mora',Descripcion:'Cultivo de mora de 3meses sembrada abonada ', },
+                
+              
 
             ],
             filter:null,
@@ -88,10 +82,7 @@ export default {
           rows:100,
           perPage:10,
           listap:null,
-          agricultor:null,
-          id:'agricultor.id',
         }
-     
     },
     components:{
         
@@ -101,20 +92,16 @@ export default {
     },
     methods:{
         eliminar(){
-              alert("Seguro que quieres eliminar")
+              alert("eliminar")
            
           },
           editar(){
              
           }
     },
-    mounted(){
-        axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
-            this.agricultor=response.data
-        });
+    mounted: function(){
 
     }
-    
 }
 </script>
 

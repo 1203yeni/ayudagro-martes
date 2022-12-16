@@ -120,12 +120,11 @@ export default {
             this.$router.push("/");
         }
     },
-    mounted() {
-        alert()
-        axios.get("http://localhost:3000/pregunta").then(response => {
-            this.listar = response.data
-        })
-    },
+    mounted(){
+    axios.get("http://localhost:3000/pregunta").then(response=>{
+      this.listar=response.data
+    })  
+  },
 }
 </script>
 

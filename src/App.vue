@@ -16,6 +16,7 @@
       <router-link to="/InicioAdministradorView">Inicio Administrador</router-link>|}
       <router-link to="/AdministradorView">Administrador</router-link>|
       <router-link to="/RespuestasView">Respuestas</router-link>|
+      <router-link to="/CultivosAdministradorView">CultivosAdministrador</router-link>
 
       
     </nav>-->

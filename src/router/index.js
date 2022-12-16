@@ -19,6 +19,7 @@ import GuardarView from '../views/GuardarView.vue'
 import AdministradorView from '../views/AdministradorView.vue'
 import RespuestasView from '../views/RespuestasView.vue'
 import Respuestas2View from '../views/Respuestas2View.vue'
+import CultivosAdministradorView from '../views/CultivosAdministradorView'
 
 Vue.use(VueRouter)
 
@@ -114,6 +115,11 @@ const routes = [
     path: '/RespuestasView',
     name: 'RespuestasView',
     component:RespuestasView
+  },
+  {
+    path: '/CultivosAdministradorView',
+    name: 'CultivosAdministradorView',
+    component:CultivosAdministradorView
   },
   {
     path: '/about',

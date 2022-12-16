@@ -24,18 +24,22 @@
               </div>
             </div>
             <!--columa de la foto-->
-            <div class="col-sm-8">
-              <div class="card-block">
+            <div class="col-sm-8" >
+              <div class="card-block" >
                   <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMACION</h6>
-             <!--terminacion de titulo informacion-->     
-             
-              
+             <!--terminacion de titulo informacion-->   
+             <div v-for="agricultor in agricultor" :key="agricultor.id" >
                   <p class="m-b-6 f-w-200">Nombre:
-                    <input type="text"  name="Direccion" id="Direccion" v-model="form.Nombre">
+                    <nav>
+                    <input type="text"  name="Direccion" id="Direccion"  {{agricultor.nombre}}>
+                    <h6></h6>
+                     
+                  </nav>
                     <b-button size="sm" variant="success" class="mb-2 ">
                     <b-icon icon="pencil-fill" aria-idem="true"></b-icon>
                    </b-button>
                   </p>
+                </div>       
                   
                   
       
@@ -84,6 +88,7 @@
 </template>
 
 <script>
+import axios  from'axios';
 export default {
 name:"PerfilUsuarioView",
 data(){
@@ -93,9 +98,17 @@ data(){
       "Apellido":"",
       "Nick_name":"",
       "Direccion":""
-    }
+    },
+    agricultor:null,
   }
-}
+},
+mounted(){
+       
+        axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
+            this.agricultor=response.data
+        });
+    
+    }
 }
 </script>
 

@@ -46,44 +46,32 @@
                 <b-col sm="1">
                 </b-col>
 
-                <b-col class="segunda" sm="8" v-for="agricultor in agricultor" :key="agricultor.id">
-                    <div class="combo2">
-                        <div class="tarjeta1" v-for="pregunta in pregunta" :key="pregunta.id">
-                            <b-row>
+                <b-col class="segunda" sm="8">
+                    <div class="combo2"   >
+                        <div class="tarjeta1">
+                            <b-row >
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">
                                 </b-col>
 
-                                <b-col sm="9" >
-                                    <h6 class="problemas">{{agricultor.nombre+" "+agricultor.apellido}}</h6>
-                                    <br>
-                                    <h6 class="problemas"> {{pregunta.contenido}}</h6>
+                                <b-col sm="9">
+                                    <h6 class="problemas" ></h6>
+                                    <h6 class="problemas" ></h6>
+                                    
                                     <br>
                                 </b-col>
                                
-                            </b-row>
-                            <br>
-                            <b.row>
-                                <b-col >
-                            
-                            <b-form-textarea id="textarea" v-model="form.contenido" placeholder="Digita tu respuesta.." rows="3" max-rows="6">
-                            </b-form-textarea>
-                            
-                          </b-col>
-                        </b.row>
-                            
-                          
+                            </b-row> 
                         </div> 
                         <div>
-                            <b-form-textarea id="textarea"
-                             v-model="form.contenido" placeholder="Digita tu respuesta.." rows="3" max-rows="6"
-                            ></b-form-textarea>
-                            <b-button class="" @click="guardarRespuesta()">Responder
+                            <b-form-textarea  v-model="form.contenido" placeholder="Digita tu pregunta.." rows="3" max-rows="6">
+                                <p></p>
+                           </b-form-textarea>
+                            <b-button class="boton" @click="guardarRespuesta()" >Guardar respuesta
                             <b-icon icon="symmetry-horizontal"> </b-icon>
                            </b-button>
                           </div>
-                    </div>
-                  
+                    </div>    
                 </b-col>
 
             </b-row>
@@ -102,9 +90,7 @@ export default {
         return {
             form:{
                "contenido":"",
-               estado: "👍",
-               
-           },
+               },
            pregunta:null,
            agricultor:null,
            respuesta:null,
@@ -154,7 +140,7 @@ export default {
         axios.get("http://localhost:3000/3r420listarAgricultor").then(response=>{
             this.agricultor=response.data
         });
-        axios.get("").then(response=>{
+        axios.get("http://localhost:3000/respuesta").then(response=>{
             this.respuesta=response.data
         });
     }
@@ -201,14 +187,15 @@ export default {
 }
 
 .tarjeta1 {
-    //background:url("@/assets/imagenfondocomentarios.jpg");
-    background-color:rgb(133, 67, 78);
+    background:url("@/assets/imagenfondocomentarios.jpg");
+    background-color:rgb(67, 133, 93);
     border: 1px solid;
     height: 7em;
 
 }
 .tarjeta2 {
     background:url("@/assets/imagenfondocomentarios.jpg");
+    margin-top: 8px;
     background-color:rgb(67, 92, 133);
     border: 1px solid;
     height: 7em;
@@ -218,7 +205,7 @@ export default {
 .img5 {
     border-radius: 90%;
     border: 1px solid;
-    width: 90x;
+    width: 90px;
     height: 90px;
     margin-top: 6%;  
 }
