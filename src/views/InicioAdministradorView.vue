@@ -89,7 +89,6 @@ export default {
           perPage:10,
           listap:null,
           agricultor:null,
-          id:'agricultor.id',
         }
      
     },
@@ -119,18 +118,14 @@ export default {
 </script>
 
 <style scoped>
-.container{
- 
-}
+
 .mg1{
     border-radius: 85%;
     border: 1% solid;
     width: 35%;
     height: 60%;
 }
-.my1{
-    
-}
+
 .primera{
     border: 1px solid;
 }
