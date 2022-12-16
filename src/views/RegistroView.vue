@@ -35,9 +35,9 @@
                                                         <input type="text" class="form-control" name="Nick-name"
                                                             id="Nick-name" v-model="form.nickName">
                                                     </div>
-                                                    <label for="" class="control-label col-sm-7">PassWorld</label>
+                                                    <label for="" class="control-label col-sm-7">Password</label>
                                                     <div class="col-sm-15">
-                                                        <input type="password" class="form-control" name="PassWorld"
+                                                        <input type="password" class="form-control" name="Password"
                                                             id="Password" v-model="form.PassWorld">
                                                     </div>
 
@@ -88,15 +88,19 @@ export default {
     data() {
         return {
             form: {
-                "idRol": 1,
-                "nombre": '',
-                "apellido": "",
-                "nickName": "",
-                "PassWorld": "",
-                "Email": "",
-                "direccion": ""
+               
+                idRol: 1,
+                nombre: '',
+                apellido: "",
+                nickName: "",
+                PassWorld: "",
+                Email: "",
+                direccion: ""
+
 
             },
+           
+          
             foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
             show: true,
             listar: null,
@@ -107,7 +111,7 @@ export default {
     methods: {
         onReset(event) {
             event.preventDefault()
-            this.form.email = ''
+            this.form.Email = ''
 
         },
 
