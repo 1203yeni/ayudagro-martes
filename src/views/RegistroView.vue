@@ -138,6 +138,6 @@ export default {
 }
 
 .formulario {
-    margin: 10px;
+    margin: 11px;
 }
 </style>
