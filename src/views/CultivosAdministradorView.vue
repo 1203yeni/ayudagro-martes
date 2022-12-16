@@ -33,6 +33,7 @@
             
 
             <b-col class="segunda" sm="8">
+                
              <b-table  :filter="filter" id="my-table" :items="items" :fields="fields" class="my-table" :per-page="perPage"
              :current-page="currentPage">
               
