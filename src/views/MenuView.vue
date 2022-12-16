@@ -67,7 +67,7 @@
                           </div>
                         </div>
                          <br>
-                        <div class="tarjeta1" v-for="pregunta in pregunta" :key="pregunta.id">
+                        <div class="tarjeta1" v-for="pregunta in pregunta" v-bind:key="pregunta.id">
                             <b-row>
                                 <b-col sm="3">
                                     <img class="img5" src="@/assets/icon.jpg">

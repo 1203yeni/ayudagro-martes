@@ -35,7 +35,7 @@
                                 <button class="button1" @click="Respuestas()"> Respuestas</button>
                                 <br>
                                 <br>
-                                <button class="button1" @click="Estadisticas()">Estadiscas</button>
+
                                 <br>
                                 <br>
                             </div>
