@@ -35,9 +35,9 @@
                                                         <input type="text" class="form-control" name="Nick-name"
                                                             id="Nick-name" v-model="form.nickName">
                                                     </div>
-                                                    <label for="" class="control-label col-sm-7">Password</label>
+                                                    <label for="" class="control-label col-sm-7">PassWorld</label>
                                                     <div class="col-sm-15">
-                                                        <input type="password" class="form-control" name="Password"
+                                                        <input type="password" class="form-control" name="PassWorld"
                                                             id="Password" v-model="form.PassWorld">
                                                     </div>
 
@@ -46,7 +46,7 @@
                                                         <b-form-group id="input-group-1" label="Email address:"
                                                             label-for="input-1" description="">
                                                             <b-form-input id="input-1" class="form-control" name="Email"
-                                                                v-model="form.email" type="email"
+                                                                v-model="form.Email" type="email"
                                                                 placeholder="Enter email" required></b-form-input>
                                                         </b-form-group>
 
@@ -88,7 +88,6 @@ export default {
     data() {
         return {
             form: {
-                email: '',
                 "idRol": 1,
                 "nombre": '',
                 "apellido": "",
